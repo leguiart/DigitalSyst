@@ -1,0 +1,35 @@
+|ej2e
+a => cand:u3.a
+a => cand:u1.a
+b => cand:u2.a
+b => cand:u1.b
+c => cand:u3.b
+c => cand:u2.b
+f <= cor:u4.d
+
+
+|ej2e|cand:u1
+a => c~0.IN0
+b => c~0.IN1
+c <= c~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ej2e|cand:u2
+a => c~0.IN0
+b => c~0.IN1
+c <= c~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ej2e|cand:u3
+a => c~0.IN0
+b => c~0.IN1
+c <= c~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ej2e|cor:u4
+a => d~0.IN0
+b => d~0.IN1
+c => d~1.IN1
+d <= d~1.DB_MAX_OUTPUT_PORT_TYPE
+
+

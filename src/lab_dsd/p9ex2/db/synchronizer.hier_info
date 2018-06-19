@@ -1,0 +1,6 @@
+|synchronizer
+clk => current.CLK
+adata => current~0.DATAA
+synched <= current.DB_MAX_OUTPUT_PORT_TYPE
+
+

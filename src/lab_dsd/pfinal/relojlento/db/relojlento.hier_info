@@ -1,0 +1,53 @@
+|top
+clkl => relojlento:u1.clkl
+clk => ~NO_FANOUT~
+x => ~NO_FANOUT~
+led <= <GND>
+led2 <= <GND>
+z[0] <= lavadora:u2.z[0]
+z[1] <= lavadora:u2.z[1]
+
+
+|top|relojlento:u1
+clkl => conteo[25].CLK
+clkl => conteo[24].CLK
+clkl => conteo[23].CLK
+clkl => conteo[22].CLK
+clkl => conteo[21].CLK
+clkl => conteo[20].CLK
+clkl => conteo[19].CLK
+clkl => conteo[18].CLK
+clkl => conteo[17].CLK
+clkl => conteo[16].CLK
+clkl => conteo[15].CLK
+clkl => conteo[14].CLK
+clkl => conteo[13].CLK
+clkl => conteo[12].CLK
+clkl => conteo[11].CLK
+clkl => conteo[10].CLK
+clkl => conteo[9].CLK
+clkl => conteo[8].CLK
+clkl => conteo[7].CLK
+clkl => conteo[6].CLK
+clkl => conteo[5].CLK
+clkl => conteo[4].CLK
+clkl => conteo[3].CLK
+clkl => conteo[2].CLK
+clkl => conteo[1].CLK
+clkl => conteo[0].CLK
+clkl => led~reg0.CLK
+led <= led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led2 <= led2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|lavadora:u2
+clk => zsignal[1].CLK
+clk => zsignal[0].CLK
+x => Selector2.IN2
+x => Selector1.IN2
+x => Selector2.IN1
+x => Selector1.IN1
+z[0] <= zsignal[0].DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= zsignal[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

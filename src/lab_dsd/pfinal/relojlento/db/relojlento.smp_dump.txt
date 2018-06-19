@@ -1,0 +1,6 @@
+
+State Machine - |top|lavadora:u2|current
+Name current.st2 current.st1 current.st0 
+current.st0 0 0 0 
+current.st1 0 1 1 
+current.st2 1 0 1 

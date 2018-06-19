@@ -1,0 +1,88 @@
+|contarom
+clkl => contador:u3.clkl
+reset => contador:u3.reset
+cs => romlcd:u4.cs
+bus_datos[0] <= romlcd:u4.bus_datos[0]
+bus_datos[1] <= romlcd:u4.bus_datos[1]
+bus_datos[2] <= romlcd:u4.bus_datos[2]
+bus_datos[3] <= romlcd:u4.bus_datos[3]
+bus_datos[4] <= romlcd:u4.bus_datos[4]
+bus_datos[5] <= romlcd:u4.bus_datos[5]
+bus_datos[6] <= romlcd:u4.bus_datos[6]
+
+
+|contarom|contador:u3
+clkl => relojlento:u1.clkl
+reset => cuenta:u2.reset
+salida[0] <= cuenta:u2.salida[0]
+salida[1] <= cuenta:u2.salida[1]
+
+
+|contarom|contador:u3|relojlento:u1
+clkl => conteo[24].CLK
+clkl => conteo[23].CLK
+clkl => conteo[22].CLK
+clkl => conteo[21].CLK
+clkl => conteo[20].CLK
+clkl => conteo[19].CLK
+clkl => conteo[18].CLK
+clkl => conteo[17].CLK
+clkl => conteo[16].CLK
+clkl => conteo[15].CLK
+clkl => conteo[14].CLK
+clkl => conteo[13].CLK
+clkl => conteo[12].CLK
+clkl => conteo[11].CLK
+clkl => conteo[10].CLK
+clkl => conteo[9].CLK
+clkl => conteo[8].CLK
+clkl => conteo[7].CLK
+clkl => conteo[6].CLK
+clkl => conteo[5].CLK
+clkl => conteo[4].CLK
+clkl => conteo[3].CLK
+clkl => conteo[2].CLK
+clkl => conteo[1].CLK
+clkl => conteo[0].CLK
+clkl => led~reg0.CLK
+led <= led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contarom|contador:u3|cuenta:u2
+divi => cuenta[1].CLK
+divi => cuenta[0].CLK
+reset => cuenta[1].ACLR
+reset => cuenta[0].ACLR
+salida[0] <= cuenta[0].DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= cuenta[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contarom|romlcd:u4
+bus_dir[0] => Mux4.IN5
+bus_dir[0] => Mux3.IN5
+bus_dir[0] => Mux2.IN5
+bus_dir[0] => Mux1.IN5
+bus_dir[0] => Mux0.IN5
+bus_dir[0] => bus_datos[2]~2.DATAIN
+bus_dir[0] => bus_datos[1]~1.DATAIN
+bus_dir[1] => Mux4.IN4
+bus_dir[1] => Mux3.IN4
+bus_dir[1] => Mux2.IN4
+bus_dir[1] => Mux1.IN4
+bus_dir[1] => Mux0.IN4
+cs => bus_datos[6]~6.OE
+cs => bus_datos[5]~5.OE
+cs => bus_datos[4]~4.OE
+cs => bus_datos[3]~3.OE
+cs => bus_datos[2]~2.OE
+cs => bus_datos[1]~1.OE
+cs => bus_datos[0]~0.OE
+bus_datos[0] <= bus_datos[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+bus_datos[1] <= bus_datos[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+bus_datos[2] <= bus_datos[2]~2.DB_MAX_OUTPUT_PORT_TYPE
+bus_datos[3] <= bus_datos[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+bus_datos[4] <= bus_datos[4]~4.DB_MAX_OUTPUT_PORT_TYPE
+bus_datos[5] <= bus_datos[5]~5.DB_MAX_OUTPUT_PORT_TYPE
+bus_datos[6] <= bus_datos[6]~6.DB_MAX_OUTPUT_PORT_TYPE
+
+

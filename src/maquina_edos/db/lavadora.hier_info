@@ -1,0 +1,11 @@
+|lavadora
+clk => zsignal[1].CLK
+clk => zsignal[0].CLK
+x => Selector2.IN2
+x => Selector1.IN2
+x => Selector2.IN1
+x => Selector1.IN1
+z[0] <= zsignal[0].DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= zsignal[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

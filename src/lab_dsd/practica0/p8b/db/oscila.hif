@@ -1,0 +1,334 @@
+Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+11
+910
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+bcd7seg
+# storage
+db|oscila.(3).cnf
+db|oscila.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+bcd7seg.vhd
+d098746e465bef0dbb4c4ed28e470a0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(bcd)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(led)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+bcd7seg:BCD7SEG_1S
+bcd7seg:BCD7SEG_10S
+}
+# lmf
+..|..|..|..|..|altera|90sp1|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|oscila.(1).cnf
+db|oscila.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+b539cab61c137b3bf8e6d2994457d1e5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+tcount
+25000000
+PARAMETER_SIGNED_DEC
+USR
+n_bits
+26
+PARAMETER_SIGNED_DEC
+USR
+ constraint(output)
+25 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+..|..|..|..|..|altera|90sp1|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|oscila.(2).cnf
+db|oscila.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+b539cab61c137b3bf8e6d2994457d1e5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+tcount
+10
+PARAMETER_SIGNED_DEC
+USR
+n_bits
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(output)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+counter:Counter_1s
+}
+# lmf
+..|..|..|..|..|altera|90sp1|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|oscila.(4).cnf
+db|oscila.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+b539cab61c137b3bf8e6d2994457d1e5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+tcount
+9
+PARAMETER_SIGNED_DEC
+USR
+n_bits
+3
+PARAMETER_SIGNED_DEC
+USR
+ constraint(output)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+..|..|..|..|..|altera|90sp1|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|oscila.(5).cnf
+db|oscila.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+b539cab61c137b3bf8e6d2994457d1e5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+tcount
+6
+PARAMETER_SIGNED_DEC
+USR
+n_bits
+3
+PARAMETER_SIGNED_DEC
+USR
+ constraint(output)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+counter:COUNTER_10_S
+}
+# lmf
+..|..|..|..|..|altera|90sp1|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+oscila
+# storage
+db|oscila.(0).cnf
+db|oscila.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+oscila.vhd
+213297f74965de2ddc796cb3fc4c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+counter.vhd
+b539cab61c137b3bf8e6d2994457d1e5
+bcd7seg.vhd
+d098746e465bef0dbb4c4ed28e470a0
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|..|..|altera|90sp1|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|oscila.(6).cnf
+db|oscila.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+b539cab61c137b3bf8e6d2994457d1e5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+tcount
+50000000
+PARAMETER_SIGNED_DEC
+USR
+n_bits
+26
+PARAMETER_SIGNED_DEC
+USR
+ constraint(output)
+25 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+counter:Prescaler
+}
+# lmf
+..|..|..|..|..|altera|90sp1|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+
