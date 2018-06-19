@@ -1,7 +1,0 @@
-
-State Machine - |detector110|current
-Name current.S3 current.S2 current.S1 current.S0 
-current.S0 0 0 0 0 
-current.S1 0 0 1 1 
-current.S2 0 1 0 1 
-current.S3 1 0 0 1 
